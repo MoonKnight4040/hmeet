@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f4ee;
+            color: #f2a900;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .schedule {
+            background-color: #f7f5f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .schedule h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #b0aba1;
+            background-color: #fff;
+            font-size: 16px;
+        }
+        textarea {
+            height: 120px;
+        }
+        .date-time-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .date-time-group div {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+<div class="schedule">
+        <h1>Schedule</h1>
+        <div class="input-group">
+            <label for="meeting-name">Meeting name:</label>
+            <input type="text" id="meeting-name" name="meeting-name" placeholder="Enter meeting name">
+        </div>
+        <div class="input-group">
+            <input type="checkbox" id="can-remove" name="can-remove">
+            <label for="can-remove">Can members remove other members</label>
+        </div>
+        <div class="input-group date-time-group">
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <div>
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time">
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Enter meeting description"></textarea>
+        </div>
+    </div>
+</body>
+</html>
